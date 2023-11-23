@@ -1,0 +1,93 @@
+:root {
+    /* Colors */
+    --primary: #afe01c;
+
+    --background: #0B090E;
+    --foreground: #FFFDFA;
+
+    /* Fonts */
+    --font-sans: 'Switzer', sans-serif;
+    --font-mono: 'Roboto Mono', sans-serif;
+    --font-text: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    font-size: 1.5rem;
+    font-family: var(--font-sans);
+    font-weight: 400;
+
+    padding: 1.5rem 3rem;
+}
+
+.nav-list, .sm-list {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.nav-list li {
+    position: relative;
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.sm-list li {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.sm-list li:first-child {
+    margin-left: 0;
+}
+
+.svg-icon {
+    transition: all 100ms ease-in-out;
+}
+
+.svg-icon:hover {
+    opacity: 0.5;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    width: auto;
+
+    padding: 0 3rem;
+}
+
+.intro-content {
+    display: inherit;
+    flex-direction: inherit;
+    margin: auto;
+}
+
+.intro-content span {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.intro-content span:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,51 @@
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* 
+a > span
+for any anchor tag that has text within it
+*/
+
+.a-text {
+    transition: all 100ms ease-in-out;
+    position: relative;
+}
+
+.a-text::after {
+    position: absolute;
+    content: '';
+
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    border-bottom: 1px solid var(--foreground);
+    transition: transform 0.2s ease-in-out;
+}
+
+.a-text:hover::after {
+    transform: scaleX(1);
+}
+
+.a-new-tab {
+    position: relative;
+}
+
+.a-new-tab::after {
+    position: absolute;
+    content: '↗';
+    font-size: 67%;
+
+    transform: translateX(0%);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.a-new-tab:hover::after {
+    transform: translateX(50%);
+    opacity: 1;
+}
